@@ -1,0 +1,29 @@
+$contentBackground: #fff;
+$textColor: #c1d1df;
+$navColor: #becce3;
+$textColorH2: #000000;
+$titleColor: #b9bab4;
+$descriptionColor: #395369;
+$reviewsBackground: #8d6f79;
+$reviewsColor: #cba0a2;
+$reviewBackground: #cba2b0;
+$formColor: #757575;
+$formBorder: #3f474d;
+$fomBackground: #8695a2;
+$footerBg: #3d5585;
+$footerColor: #659afe;
+$buttonBg: #0a275e;
+
+$assetPath: './../img';
+$card-img0: '#{$assetPath}/0.jpg';
+$card-img1: '#{$assetPath}/1.jpg';
+$card-img2: '#{$assetPath}/2.jpg';
+$card-img3: '#{$assetPath}/3.jpg';
+
+$icons:("icon1": "#{$assetPath}/woman.jpg",
+        "icon2": "#{$assetPath}/man.jpg",
+        "icon3": "#{$assetPath}/woman2.jpg");
+
+
+
+$font-weights: ("regular": 400, "medium": 500, "bold": 700);

@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,200;1,300&display=swap");
+.main-row {
+  padding: 30px; }
+
+.center, body .container .header__image {
+  background-position: top;
+  background-size: cover;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%; }
+
+.background, body main .cards .card__image {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover; }
+
+button {
+  padding: 20px 15px;
+  background-color: inherit;
+  color: #e1d7dc;
+  border: 1px solid #e1d7dc;
+  border-radius: 3px;
+  transition: 0.2s; }
+  button:hover {
+    font-size: 1.5rem;
+    border: 2px solid #fff; }
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #e1d7dc;
+  background-color: #fff; }
+  body .container .header {
+    position: relative;
+    text-align: center;
+    background-color: #fff; }
+    body .container .header__image {
+      object-fit: cover;
+      width: 100%;
+      height: 60vh;
+      background-image: url("./../img/4.jpg"); }
+    body .container .header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #573452;
+      position: absolute;
+      padding: 30px 15px; }
+      body .container .header nav ul {
+        display: flex; }
+        body .container .header nav ul li {
+          display: flex;
+          list-style: none;
+          padding: 10px;
+          cursor: pointer; }
+          body .container .header nav ul li a {
+            white-space: pre-wrap; }
+    body .container .header .center-block {
+      position: absolute;
+      padding: 30px 20px;
+      top: 50%;
+      transform: translate(0, -30%);
+      color: #e1d7dc; }
+      body .container .header .center-block .header__text {
+        padding: 15px 10px; }
+  body main {
+    display: block;
+    text-align: center; }
+    body main h2 {
+      color: #000000;
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-family: 'Source Sans Pro', sans-serif; }
+    body main .cards {
+      padding-right: 20px; }
+      body main .cards .card {
+        margin-bottom: 20px;
+        padding-right: 20px;
+        display: flex;
+        border: 1px solid grey; }
+        body main .cards .card__image {
+          object-fit: cover;
+          width: 100%;
+          background-color: #4f0a5e; }
+        body main .cards .card__image-first {
+          background-image: url("./../img/5.jpeg"); }
+        body main .cards .card__image-second {
+          background-image: url("./../img/6.jpg"); }
+        body main .cards .card__image-three {
+          background-image: url("./../img/7.jpg"); }
+        body main .cards .card-main {
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          padding: 15px; }
+        body main .cards .card__title {
+          color: #d8cace; }
+        body main .cards .card__description {
+          color: #796b75; }
+    body main .reviews {
+      background-color: #8a6f8d;
+      padding: 10px;
+      margin: 50px 100px;
+      border: 1px solid grey; }
+      body main .reviews h2 {
+        color: #5c4c5c; }
+      body main .reviews .review-line {
+        display: flex; }
+        body main .reviews .review-line .review {
+          display: flex; }
+          body main .reviews .review-line .review__image .circle-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+            margin: 10px; }
+          body main .reviews .review-line .review__image .circle__image-icon1 {
+            background-image: url("./../img/woman.jpg"); }
+          body main .reviews .review-line .review__image .circle__image-icon2 {
+            background-image: url("./../img/man.jpg"); }
+          body main .reviews .review-line .review__image .circle__image-icon3 {
+            background-image: url("./../img/woman2.jpg"); }
+          body main .reviews .review-line .review-row {
+            background-color: #caa2cb;
+            display: flex; }
+            body main .reviews .review-line .review-row .review-card__text {
+              font-size: 0.7rem;
+              display: flex;
+              flex-wrap: wrap;
+              padding: 5px;
+              color: #ffffff; }
+            body main .reviews .review-line .review-row span {
+              display: block; }
+    body main .search-form {
+      background-color: #9f86a2;
+      padding: 20px 25px;
+      margin: 10px 100px; }
+      body main .search-form h3 {
+        color: #573452;
+        font-size: 2rem; }
+      body main .search-form__inputs input, body main .search-form__inputs .search-individual-tour {
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid #464e53;
+        color: #9f86a2;
+        background-color: #9f86a2;
+        font-size: 1rem;
+        padding: 10px; }
+    body main .about-us {
+      background-color: #5d3d85;
+      width: 100%;
+      display: flex;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px; }
+      body main .about-us .first-column {
+        padding: 10px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: left; }
+        body main .about-us .first-column h3 {
+          color: #8f52c6;
+          font-size: 1.5rem; }
+        body main .about-us .first-column .img-contact-us {
+          padding: 10px 10px 10px 0; }
+          body main .about-us .first-column .img-contact-us a {
+            text-decoration: none; }
+            body main .about-us .first-column .img-contact-us a img {
+              width: 20px;
+              height: 20px; }
+        body main .about-us .first-column .footer__menu {
+          color: #4f0a5e; }
+      body main .about-us .second-column {
+        flex: 1;
+        display: flex;
+        text-align: left; }
+        body main .about-us .second-column div {
+          margin-right: 20px;
+          display: flex;
+          flex-direction: column; }
+          body main .about-us .second-column div h4 {
+            color: #8f52c6;
+            font-size: 1.5rem; }
+          body main .about-us .second-column div a {
+            padding-left: 10px;
+            text-decoration: none;
+            color: #8f52c6; }
+      body main .about-us .three-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column; }
+        body main .about-us .three-column .footer-form {
+          display: flex;
+          flex-direction: column;
+          color: #4f0a5e; }
+          body main .about-us .three-column .footer-form p {
+            font-weight: 700;
+            text-align: left; }
+          body main .about-us .three-column .footer-form input {
+            padding: 10px; }
+          body main .about-us .three-column .footer-form input, body main .about-us .three-column .footer-form button {
+            margin-bottom: 10px;
+            border: none; }
+          body main .about-us .three-column .footer-form button {
+            background-color: #4f0a5e;
+            color: #fff; }
+        body main .about-us .three-column .pay {
+          text-align: left; }
+          body main .about-us .three-column .pay p {
+            font-size: 1.2rem;
+            color: #8f52c6; }
+          body main .about-us .three-column .pay a {
+            margin: 5px; }
+            body main .about-us .three-column .pay a img {
+              height: 30px; }
