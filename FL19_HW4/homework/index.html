@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,102 +10,121 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <div class="main-wrapper">
+  <div class="wrapper">
     <header class="header">
-      <div>
-        <a class="header-link">
-          <img  class="header__logo" src="./img/logo.png" alt="logo">
+      <div class="header__content">
+        <a class="header__logo logo" href="#">
+          <img src="./img/logo.png" alt="logo">
         </a>
+
         <nav class="navigation">
-          <a class="navigation__link" href="">about us</a>
-          <a class="navigation__link" href="">robots</a>
+          <a class="navigation__link" href="#">about us</a>
+          <a class="navigation__link" href="#">robots</a>
           <a class="navigation__link" href="#">certificates</a>
-          <a class="navigation__link" href="">faq</a>
-          <a class="navigation__link" href="">contacts</a>
+          <a class="navigation__link" href="#">faq</a>
+          <a class="navigation__link" href="#">contacts</a>
         </nav>
       </div>
 
-      <button class="navigation__button">order now</button>
+      <button class="navigation__order">order now</button>
     </header>
 
-    <main class="main wrapper">
-      <div class="previu-content">
-        <p class="previu-content__p-first">ebo</p>
-        <p class="previu-content__p">Best friend <br> for your cat</p>
-        <p class="previu-content__p">love care <br> and always <br> be with your pet</p>
-      </div>
-      <div  class="main-img"></div>
-      <div class="wrapper">
-        <article class="about-cat1">
-          <img src="./img/cat1.png" alt="cat">
-          <div>
-            <h2>Ebo has real-life mimic</h2>
-            <p>Ebo’s eyes, movements and sounds mimic real-life play, keeping your cat engaged day after day</p>
-            <button class="button about__button">learn more</button>
-          </div>
-        </article>
-        <article class="about-cat2">
-          <img src="./img/cat2.png" alt="cat">
-          <div>
-            <h2>Adapts to cat’s mood</h2>
-            <p>Present in Ebo, AI algorithms detect your cat’s mood and adapt to its unique play style and personality</p>
-            <button class="button about__button">learn more</button>
-          </div>
-        </article>
-        <section class="section-cards">
-          <h2>What Ebo can additionally</h2>
-          <div class="cards">
-            <div class="card">
-              <div class="card__content">
-                <img class="card__image" src="./img/ebo1.jpg" alt="ebo">
-                <h2 class="card__title">Moves activly through the sensors</h2>
-                <p class="card__description">Ebo wheels, rolls and dances on its own and is equipped with collision sensors</p>
-              </div>
-              <button class="button card__button">learn more</button>
-            </div>
-            <div class="card">
-              <div class="card__content">
-                <img class="card__image" src="./img/ebo2.jpg" alt="ebo">
-                <h2 class="card__title">Equipped with cat’s activity tracker </h2>
-                <p class="card__description">Monitor your cat’s health metrics and activity with Ebo activity tracker</p>
-              </div>
-              <button class="button card__button">learn more</button>
-            </div>
-            <div class="card">
-              <div class="card__content">
-                <img class="card__image" src="./img/ebo3.jpg" alt="ebo">
-                <h2 class="card__title">Automatically return to charging dock</h2>
-                <p class="card__description">Ebo automatically returns to its dock when it needs to charge</p>
-              </div>
-              <button class="button card__button">learn more</button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
+    <main class="main">
+      <div class="preview">
+        <p class="preview__title">ebo</p>
+        <p class="preview__subtitle">Best friend <br> for your cat</p>
+        <p class="preview__caption">love care <br> and always <br> be with your pet</p>
 
-    <div class="footer">
-      <div class="footer__logo">
+        <div class="preview__img"></div>
+      </div>
+
+      <div class="about-us">
+        <article class="about-us__card">
+          <img class="about-us__img" src="./img/cat1.png" alt="cat">
+          <div class="about-us__content">
+            <h2 class="about-us__title">Ebo has real-life mimic</h2>
+            <p class="about-us__subtitle">Ebo’s eyes, movements and sounds mimic real-life play, keeping your cat engaged day after day</p>
+            <button class="about-us__button button">learn more</button>
+          </div>
+        </article>
+
+        <article class="about-us__card">
+          <img class="about-us__img" src="./img/cat2.png" alt="cat">
+          <div class="about-us__content">
+            <h2 class="about-us__title">Adapts to cat’s mood</h2>
+            <p class="about-us__subtitle">Present in Ebo, AI algorithms detect your cat’s mood and adapt to its unique play style and personality</p>
+            <button class="about-us__button button">learn more</button>
+          </div>
+        </article>
+      </div>
+
+      <section class="robots">
+        <h2 class="robots__title">What Ebo can additionally</h2>
+
+        <div class="robots__cards">
+          <div class="robots__card">
+            <div class="robots__content">
+              <img class="robots__img" src="./img/ebo1.jpg" alt="ebo">
+              <h3 class="robots__title">Moves activly through the sensors</h3>
+              <p class="robots__description">Ebo wheels, rolls and dances on its own and is equipped with collision sensors</p>
+            </div>
+
+            <button class="robots__button button">learn more</button>
+          </div>
+
+          <div class="robots__card">
+            <div class="robots__content">
+              <img class="robots__img" src="./img/ebo2.jpg" alt="ebo">
+              <h3 class="robots__title">Equipped with cat’s activity tracker</h3>
+              <p class="robots__description">Monitor your cat’s health metrics and activity with Ebo activity tracker</p>
+            </div>
+
+            <button class="robots__button button">learn more</button>
+          </div>
+
+          <div class="robots__card">
+            <div class="robots__content">
+              <img class="robots__img" src="./img/ebo3.jpg" alt="ebo">
+              <h3 class="robots__title">Automatically return to charging dock</h3>
+              <p class="robots__description">Ebo automatically returns to its dock when it needs to charge</p>
+            </div>
+
+            <button class="robots__button button">learn more</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="footer">
+    <div class="wrapper footer__row">
+      <a class="footer__column footer__logo logo" href="#">
         <img src="./img/logo.png" alt="logo">
+      </a>
+
+      <div class="footer__column">
+        <a href="#">About Us</a>
+        <a href="#">All robots</a>
+        <a href="#">Certificates</a>
+        <a href="#">Careers</a>
+        <a href="#">News</a>
       </div>
-      <div class="footer__about">
-        <a>About Us</a>
-        <a>All robots</a>
-        <a>Certificates</a>
-        <a>Careers</a>
-        <a>News</a>
+
+      <div class="footer__column">
+        <a href="#">Support</a>
+        <a href="#">Guarantee</a>
       </div>
-      <div class="footer__support">
-        <a>Support</a>
-        <a>Guarantee</a>
+
+      <div class="footer__column">
+        <a href="#">Customer feedback</a>
+        <a href="#">Press Inquires</a>
+        <a href="#">FAQ</a>
       </div>
-      <div class="footer__feedback">
-        <a>Customer feedback</a>
-        <a>Press Inquires</a>
-        <a>Press Inquires</a>
-      </div>
-      <footer><p>2019 ebo</p>
-        <p>All Rights Reserved</p></footer>
+
+      <footer class="footer__column footer_copyright">
+        <p>2019 ebo</p>
+        <p>All Rights Reserved</p>
+      </footer>
     </div>
   </div>
 </body>
