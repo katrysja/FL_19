@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+    cursor: pointer;
+}
+
+body {
+    color: #000000;
+    font-size: 16px;
+    font-family: system-ui, sans-serif;
+
+    background-color: #fbf9fa;
+    background-image: url("./../img/wheat.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 70% auto;
+}
+
+.wrapper {
+    padding: 0.8rem 1.2rem;
+}
+
+.section {
+    margin-top: 2rem;
+}
+
+.section__title {
+    padding: 0.1rem 0.5rem;
+    border-left: 8px solid #65aa44;
+    border-bottom: 2px solid #65aa44;
+
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.section__subtitle {
+    margin-top: 1rem;
+    color: #65aa44;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.section__description {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    font-weight: 100;
+}
+
+/* NAVIGATION */
+.navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.navigation__link {
+    flex: 0 0 30%;
+
+    color: #000000;
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 1.4rem;
+}
+
+/* MAIN */
+.main {
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.main__offer {
+    font-weight: 100;
+    line-height: 1.2rem;
+}
+
+.main__name {
+    color: #e2ba7b;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.main__button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: none;
+    border: 0;
+    border-left: 1px solid #65aa44;
+    border-right: 1px solid #65aa44;
+    font-weight: 300;
+}
+
+/* LOGISTIC */
+.logistic__card {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.logistic__icon {
+    width: 2rem;
+    height: auto;
+}
+
+.logistic__name {
+    margin-left: 2rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+/* PRICE LIST */
+.price__list {
+    margin-left: 2rem;
+}
+
+.price__list li::marker {
+    color: #d8cace;
+}
+
+/* NEWS */
+.news__query {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.6rem;
+}
+
+.news__card {
+    margin-top: 1rem;
+    display: flex;
+    padding: 0.3rem;
+    background-color: #fbf9fa;
+    box-shadow: 0 0 1rem #d3d3d3;
+}
+
+.news__image {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+}
+
+.news__content {
+    margin-left: 1rem;
+}
+
+.news__subtitle {
+    color: #808080;
+    font-style: italic;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 1rem;
+    background-color: #f5f5f5;
+    padding: 1rem;
+}
+
+.footer__query {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__group {
+    display: flex;
+    font-size: 0.6rem;
+}
+
+.footer__title {
+    flex: 1;
+}
+
+.footer__content {
+    flex: 2;
+    color: #808080;
+    font-weight: 200;
+}
+
+.footer__contacts {
+    flex-direction: column;
+}
+
+.footer__contacts img {
+    width: auto;
+    height: 1.5rem;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+    body {
+        background-size: 60% auto;
+    }
+
+    .wrapper {
+        padding: 0.8rem 2.5rem;
+    }
+
+    .section {
+        margin-top: 2rem;
+    }
+
+    .section__title {
+        padding: 0.1rem 0.5rem;
+        font-size: 2rem;
+    }
+
+    .section__subtitle {
+        font-size: 1.5rem;
+    }
+
+    .section__description {
+        font-size: 0.8rem;
+        font-weight: 100;
+    }
+
+    /* NAVIGATION */
+    .navigation {
+        margin-left: 30%;
+    }
+
+    .navigation__link {
+        flex: 1;
+        font-weight: 200;
+    }
+
+    /* MAIN */
+    .main {
+        margin-left: 45%;
+        margin-top: 5rem;
+        text-align: left;
+    }
+
+    .main__card {
+        width: 30%;
+    }
+
+    .main__query {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main__name {
+        font-size: 1.5rem;
+    }
+
+    .main__offer {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .main__button {
+        margin-top: 1.5rem;
+        padding: 1rem 3rem;
+        font-weight: 100;
+    }
+
+    /* LOGISTIC */
+    .logistic__query {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .logistic__card {
+        width: 50%;
+    }
+
+    /* NEWS */
+    .news__query {
+        font-size: 0.8rem;
+    }
+
+    .news__image {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .news__content {
+        margin-left: 1rem;
+        padding: 1rem 0;
+    }
+
+    .news__description {
+        margin-top: 3rem;
+        font-weight: 200;
+    }
+
+    /* FOOTER */
+    .footer__group {
+        display: flex;
+        font-size: 0.8rem;
+    }
+
+    .footer__contacts img {
+        height: 1rem;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+    body {
+        background-size: 40% auto;
+    }
+
+    /* MAIN */
+    .main {
+        margin-left: 40%;
+        margin-top: 5rem;
+        text-align: left;
+    }
+
+    /* LOGISTIC */
+    .logistic__card {
+        flex: 1;
+        width: auto;
+    }
+
+    /* NEWS */
+    .news__query {
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 0.6rem;
+    }
+
+    .news__card {
+        width: 30%;
+    }
+
+    .news__image {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .news__content {
+        margin-left: 0.5rem;
+        padding: 0;
+    }
+
+    .news__description {
+        margin-top: 0;
+    }
+
+    /* FOOTER */
+    .footer__query {
+        flex-direction: row;
+    }
+
+    .footer__group {
+        padding-right: 1rem;
+    }
+
+    .footer__content {
+        margin-left: 1rem;
+    }
+
+    .footer__content {
+        display: flex;
+        flex-direction: column;
+    }
+}
