@@ -22,6 +22,14 @@ body {
     background-size: 70% auto;
 }
 
+table {
+    border-spacing: 0;
+}
+
+tr, th, td {
+    border: 2px solid #e2ba7b;
+}
+
 .wrapper {
     padding: 0.8rem 1.2rem;
 }
@@ -115,6 +123,10 @@ body {
     margin-left: 2rem;
     font-size: 0.7rem;
     font-weight: 700;
+}
+
+.table {
+    display: none;
 }
 
 /* PRICE LIST */
@@ -259,6 +271,15 @@ body {
         margin-top: 1.5rem;
         padding: 1rem 3rem;
         font-weight: 100;
+    }
+
+    /* PRICE */
+    .table {
+        display: block;
+    }
+
+    .table table {
+        margin-top: 1rem;
     }
 
     /* LOGISTIC */
