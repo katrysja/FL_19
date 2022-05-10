@@ -1,0 +1,39 @@
+
+.wrapper {
+    max-width: 780px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+}
+.button {
+    background-color: #f7d57c;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.button:active,
+.button:hover {
+    box-shadow: 0px 5px 10px 2px rgba(40, 151, 31, 0.2) inset;
+}
+
+#nickname {
+    padding: 10px;
+}
+.button-circle {
+    display: inline-block;
+    margin: 40px;
+    width: 250px;
+    height: 250px;
+    font-size: 20px;
+    background-color:  #92b5f2;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
