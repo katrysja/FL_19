@@ -1,5 +1,5 @@
 const API_URL = 'https://rickandmortyapi.com/api/character/';
-const PAGINATION_PER_PAGE = 5
+const CHARACTERS_PER_PAGE = 5
 
 const LOCAL_STORAGE_KEY = 'personsList';
 
@@ -10,10 +10,11 @@ const loadMoreButton = document.querySelector('.load-more');
 const charactersContainer = document.querySelector('#characters-wrap');
 
 let charactersList = loadList();
+let charactersLimit = CHARACTERS_PER_PAGE;
 
 searchInput.addEventListener('keypress', onSearchPressEnter);
 searchButton.addEventListener('click', onSearchClick);
-// loadMoreButton.addEventListener('click', onLoadMoreClick);
+loadMoreButton.addEventListener('click', onLoadMoreClick);
 
 init();
 
@@ -29,24 +30,23 @@ async function searchItem() {
         return;
     }
     
-    const characterData = await getDataByID(id);
+    const {image, error} = await getDataByID(id);
     
-    if (characterData.error) {
-        alert(characterData.error);
+    if (error) {
+        alert(error);
         return;
     }
     
-    charactersList.unshift(characterData);
-    saveList(charactersList);
-    updateLoadMoreButton();
-    
-    // update list in DOM
-    const characterElement = getElement(characterData);
-    charactersContainer.prepend(characterElement);
-    
-    if (charactersList.length > 5) {
-        charactersContainer.children[5].remove();
+    const existed = charactersList.find((characterData) => characterData.id === id );
+    if (existed !== undefined) {
+        alert('Character is already in the list');
+        return;
     }
+    
+    charactersList.unshift({id, image});
+    saveList(charactersList);
+    renderList(charactersList);
+    updateLoadMoreButton();
 }
 
 /**
@@ -62,12 +62,7 @@ async function getDataByID(identifier) {
 }
 
 function init() {
-    for (let i = 0; i < 5; i++) {
-        const characterData = charactersList[i];
-        const characterElement = getElement(characterData);
-        charactersContainer.append(characterElement);
-    }
-    
+    renderList(charactersList);
     updateLoadMoreButton();
 }
 
@@ -79,6 +74,12 @@ function onSearchPressEnter(event) {
 
 function onSearchClick() {
     searchItem();
+}
+
+function onLoadMoreClick() {
+    charactersLimit += CHARACTERS_PER_PAGE;
+    renderList(charactersList);
+    updateLoadMoreButton();
 }
 
 /**
@@ -101,12 +102,29 @@ function saveList(array) {
 }
 
 /**
+ * Re-render characters list
+ */
+function renderList(array) {
+    charactersContainer.innerHTML = '';
+    
+    for (let i = 0; i < array.length; i++) {
+        if (i >= charactersLimit) {
+            break;
+        }
+        
+        const {id, image} = array[i];
+        const characterElement = getElement(id, image);
+        charactersContainer.append(characterElement);
+    }
+}
+
+/**
  * Render HTML Element for character
  * @param id - character's id
  * @param image - character's image src
  * @return {HTMLElement}
  */
-function getElement({id, image}) {
+function getElement(id, image) {
     const wrapper = document.createElement('div');
     wrapper.id = `character_${id}`;
     wrapper.classList.add('character');
@@ -128,7 +146,7 @@ function getElement({id, image}) {
 }
 
 function updateLoadMoreButton() {
-    if (charactersList.length > 5) {
+    if (charactersList.length > charactersContainer.children.length) {
         loadMoreButton.removeAttribute('hidden');
     } else {
         loadMoreButton.setAttribute('hidden', 'true');
@@ -136,9 +154,13 @@ function updateLoadMoreButton() {
 }
 
 function removeCharacter(id) {
+    if (!confirm('Are you sure?')) {
+        return;
+    }
+    
     const index = charactersList.findIndex(characterData => characterData.id === id);
     charactersList.splice(index, 1);
     saveList(charactersList);
-    
-    charactersContainer.querySelector(`#character_${id}`);
+    renderList(charactersList);
+    updateLoadMoreButton();
 }
